@@ -3,7 +3,8 @@ function Footer() {
         <footer className="footer">
             <p>Santiago Gómez</p>
             <p>Ficha: 3223898</p>
-            <p>© 2026 Mercacauca</p>
+            <p>Año : 2026</p>
+            <p>Mercauca Popayan</p>
 
             <h4>APIs utilizadas</h4>
 
