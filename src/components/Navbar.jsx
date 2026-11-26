@@ -2,12 +2,16 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 function Navbar() {
 
+    
     const navigate = useNavigate();
+
+    // nos permite saber en que pagina estamos
     const location = useLocation();
 
     return (
         <nav className="navbar">
 
+            {/* boton para ir al inicio */}
             <button
                 className={location.pathname === "/" ? "activo" : ""}
                 onClick={() => navigate("/")}
@@ -15,6 +19,7 @@ function Navbar() {
                 Inicio
             </button>
 
+            {/* boton para ir a la vitrina */}
             <button
                 className={location.pathname.startsWith("/catalogo") ? "activo" : ""}
                 onClick={() => navigate("/catalogo")}
@@ -22,6 +27,7 @@ function Navbar() {
                 Vitrina
             </button>
 
+            {/* boton para ir a la canasta */}
             <button
                 className={location.pathname === "/compras" ? "activo" : ""}
                 onClick={() => navigate("/compras")}
@@ -29,6 +35,7 @@ function Navbar() {
                 Mi Canasta
             </button>
 
+            {/* boton para ver el pedido */}
             <button
                 className={location.pathname === "/compras/resumen" ? "activo" : ""}
                 onClick={() => navigate("/compras/resumen")}
@@ -41,3 +48,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
